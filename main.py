@@ -9,7 +9,7 @@ async def get_info(slack_name: str | None = None,
 
     current_day = datetime.utcnow().strftime("%A")
 
-    utc_time = (datetime.utcnow() + timedelta(minutes=2)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    utc_time = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
     response_data = {
         "slack_name": slack_name,
